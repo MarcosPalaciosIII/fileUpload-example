@@ -1,2 +1,16 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+
+
+<h1>Welcome to the Movie Project</h1>
+<div class="movies-wrapper">
+ {{#each movies}}
+  <div class="movie-item">
+    <img src="{{this.imgPath}}" alt="">
+    <span>{{this.imbName}}</span>
+    <h4>{{this.title}}</h4>
+    <p>{{this.description}}</p>
+  </div>
+{{else}}
+  <p>There are no movies yet! :(</p>
+{{/each}}
+</div>
